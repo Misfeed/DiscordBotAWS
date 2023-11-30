@@ -16,13 +16,13 @@ client = discord.Bot()
 token = str(os.getenv('TOKEN'))
 
 
-#function to show bot is functional and logged on
+#function on_ready to show bot is functional and logged on
 @client.event
 async def on_ready():
     print("Logged in as bot {0.user}".format(client))
 
 
-#Creation of function and local variables  
+#Creation of function on_message and local variables  
 @client.event
 async def on_message(message):
     username = str(message.author).split("#")[0]
