@@ -27,6 +27,10 @@ async def on_message(message):
     username = str(message.author).split("#")[0]
     channel = str(message.channel.name)
     user_message = str(message.content)
+    choices = ("time","what is the downtime","downtime")
+
+    while user_message not in choices:
+        user_message = message.channel.send(f'Please ask for "downtime" or "time"' {username})
 
     #outtput,format{f} with brackets.
     print(f'Message {user_message} by {username} on {channel}')
